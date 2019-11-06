@@ -5,7 +5,7 @@ Event: "Eswatini UseR Meetup"
 
 Author: "Emmanuel Olamijuwon"
 
-Venue: "University of Eswatini, Kwaluseni Campus"
+Venue: "University of Eswatini"
 
 Date: "11/6/2019"
 ---
@@ -34,7 +34,7 @@ To install/use a package
 
   - Step 1: Install the package install.packages(`package.name`)
   
-      > --  or devtools::install_github("repository/package.name")
+      > or devtools::install_github("repository/package.name")
   
   -  Step 2: Load the package    library(`package.name`)
   
@@ -71,6 +71,7 @@ TeenData <- read.csv("C:\\Users\\eOlamijuwon\\OneDrive\\Research\\Computational 
 #   Note that <- is an assignment function (just as = in STATA)
 
 #   You could also read the data into RStudio using the read_csv function in readr package
+
 TeenDatR <- read_csv ("C:\\Users\\eOlamijuwon\\OneDrive\\Research\\Computational Social Science\\Eswatini UseR\\Intro to R\\teenageData.csv")
 
 
@@ -189,7 +190,7 @@ descrTable(TeenPreg)
       
         NOTE: You can use the `table` function to tabulate
   
-# Activity 2
+# Class Activity
 
   Using the TeenData, find:
   
@@ -201,4 +202,18 @@ descrTable(TeenPreg)
   
   
   
-## NOTE:: Solutions to Practice exercise is available [[here](https://rstudio.com/products/rstudio/download/)] while the solution to activity 2 is available [[here](https://rstudio.com/products/rstudio/download/)]
+NOTE:: Solutions to Practice exercise is available [[here](https://rstudio.com/products/rstudio/download/)] while the solution to activity 2 is available [[here](https://rstudio.com/products/rstudio/download/)]
+
+
+# Contact
+
+Twitter: [[@eOlamijuwon](https://twitter.com/eolamijuwon/)]
+
+Twitter: [[@EswatiniUseR](https://twitter.com/EswatiniUseR/)]
+
+Website: [[e.Olamijuwon.com](https://e.olamijuwon.com/)]
+
+Website: [[Eswatini UseR](https://www.meetup.com/EswatiniUseR/)]
+
+Email: [[emmanuel[at]olamijuwon[dot]com]
+
