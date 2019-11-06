@@ -1,7 +1,12 @@
 ---
 Title: "Introduction to R"
+
 Event: "Eswatini UseR Meetup"
+
 Author: "Emmanuel Olamijuwon"
+
+Venue: "University of Eswatini, Kwaluseni Campus"
+
 Date: "11/6/2019"
 ---
 
@@ -29,7 +34,7 @@ To install/use a package
 
   - Step 1: Install the package install.packages(`package.name`)
   
-  --  or devtools::install_github("repository/package.name")
+      > --  or devtools::install_github("repository/package.name")
   
   -  Step 2: Load the package    library(`package.name`)
   
@@ -161,6 +166,19 @@ From the old `TeenData` data, create a new dataset ::TeenPreg:: focusing on:
 Note that in the above example we used the `filter`, `mutate`, and `select` functions from the `dplyr` package.
 
 
+You could also take the analysis further by presenting the descriptive statistics for all elements in the data using the `summaryTools` package
+
+```{r echo=TRUE}
+
+install.packages("compareGroups")
+
+library(compareGroups)
+
+descrTable(TeenPreg)
+
+```
+
+
 ## Practice Exercise
   
       - How many teenagers are in the `TeenPreg` dataset
@@ -179,4 +197,8 @@ Note that in the above example we used the `filter`, `mutate`, and `select` func
   
   - The number of teenagers who have a positive attitude to the PLHIH
   
-  - Among those who have had sex, what is the mean time since last sex (Age - Age1sex).
+  - Among those who have had sex, what is the mean years since last sex (Age - Age1sex).
+  
+  
+  
+## NOTE:: Solutions to Practice exercise is available [[here](https://rstudio.com/products/rstudio/download/)] while the solution to activity 2 is available [[here](https://rstudio.com/products/rstudio/download/)]
