@@ -13,7 +13,7 @@ Date: "11/6/2019"
 
 # Introduction
 
-R is a powerful, cross-platform, open-source, and **free** software that has been widely adopted across a number of [social]science fields. This session will attempt to cover the basics of reading data into R, data cleaning/wrangling/Management and Analysis. The session will focus on laying a groundwork to enable future self-teaching of specific use cases *[models, packages, analysis]*. A number of platforms provide *free* training resources for learning R online. This includes but not limited to [[DataCamp](https://www.datacamp.com/)], [[edX](https://www.edx.org/)], [[Cousera](https://www.coursera.org/)], [[Udacity](https://www.udacity.com/)], and of course [[YouTube](https://www.youtube.com/)], 
+R is a powerful, cross-platform, open-source, and **free** software that has been widely adopted across a number of [social]science fields. This session will attempt to cover the basics of reading data into R, data cleaning/wrangling/Management and Analysis. The session will focus on laying a groundwork to enable future self-teaching of specific use cases *[models, packages, analysis]*. A number of platforms provide *free* training resources for learning R online. This includes but not limited to *[DataCamp](https://www.datacamp.com/)*, *[edX](https://www.edx.org/)*, *[Cousera](https://www.coursera.org/)*, *[Udacity](https://www.udacity.com/)*, and of course *[YouTube](https://www.youtube.com/)*, 
 
 
 For the session, you will be required to have R and Rstudio installed on your computer. If you are still to download/install R [[click here](https://cloud.r-project.org/)] or [[here](https://rstudio.com/products/rstudio/download/)] to download RStudio
@@ -25,7 +25,7 @@ The R synthax would usually comprise of:
   - a function
   - '<-' the assignment operator
   - = for arguments
-  - # for comments # and how they are used to document function and its content
+  - '# for comments # and how they are used to document function and its content
   - $ the operator
 
 You can get an output from R simply by typing in math in the console.
@@ -49,10 +49,9 @@ You can get an output from R simply by typing in math in the console.
 
 Instead of just typing, we could assign the value[answer] to an *object/variable*
 
-## Practice Exercise I
+### Practice Exercise I
 
 ```{r}
-## Practice Exercise I
 
 ##  Add 3 and 5. Assign the value to a
 
@@ -78,7 +77,7 @@ d
 
 ```
 
-Note that we used a function *sqrt* to find the square root of 49 in the practice exercise. Functions are built in capabilities of R (base R) or could be gotten from libraries (see ##packages) or you could write yours. Exectuting a function is reffered to as *calling* the function. Most functions can take several arguments (details can be found on the package website).
+Note that we used a function *`sqrt`* to find the square root of 49 in the practice exercise. Functions are built in capabilities of R (base R) or could be gotten from libraries (see ##packages) or you could write yours. Exectuting a function is reffered to as *calling* the function. Most functions can take several arguments (details can be found on the package website).
 
 
 ## Packages
@@ -87,7 +86,7 @@ A package is a collection of R functions, complied code and sample data. Example
 
 Some common R packages are
   
-  -  *GGPlot*
+  -  *ggplot2*
   -  *dplyr*
   -  *tidyr*
   -  *readr*
@@ -203,32 +202,32 @@ From the old `TeenData` data, create a new dataset ::TeenPreg:: focusing on:
   #     - Clean Data - We want study teenage pregnancy in Eswatini
   #       That is, our sample should be teenagers
   #       From the old `TeenData` data, create a new dataset ::TeenPreg:: focusing on:
-  TeenPreg <- TeenData %>% 
+                TeenPreg <- TeenData %>% 
   
   #       - Teenagers that have never given birth (CM1)
-    filter(CM1 == "No") %>% 
+                      filter(CM1 == "No") %>% 
   
   #       - Create a var `ever_had_sex` from -Age at first sex (SB1)
-    mutate(ever_had_sex = as.numeric(SB1),
-           ever_had_sex = ifelse((ever_had_sex < 11), 
-                                 "Had Sex", "Never Had Sex")) %>% 
+                      mutate(ever_had_sex = as.numeric(SB1),
+                             ever_had_sex = ifelse((ever_had_sex < 11), 
+                                                   "Had Sex", "Never Had Sex")) %>% 
   #         Note: Variable names cannot have spaces
   
   #       - Create a var `education` [<Sec/Sec+] from Highest educational attain (welevel).
-    mutate(education = ifelse((welevel == "None" | welevel == "Primary"),
-                              "< Secondary", "Secondary+")) %>% 
+                      mutate(education = ifelse((welevel == "None" | welevel == "Primary"),
+                                                "< Secondary", "Secondary+")) %>% 
   
   #       - Create a var `violence_atti [No support/Support Violence]` from DV1A-DV1I
     
-    mutate(violence_atti = ifelse((DV1A =="Yes" |
-                                    DV1B =="Yes" | DV1C =="Yes" | 
-                                    DV1D =="Yes" | DV1E =="Yes" | 
-                                    DV1F =="Yes" | DV1G =="Yes" |
-                                    DV1H =="Yes" | DV1I =="Yes"),
-                                  "No support", "Support Violence")) %>% 
-    
+                      mutate(violence_atti = ifelse((DV1A =="Yes" |
+                                                      DV1B =="Yes" | DV1C =="Yes" | 
+                                                      DV1D =="Yes" | DV1E =="Yes" | 
+                                                      DV1F =="Yes" | DV1G =="Yes" |
+                                                      DV1H =="Yes" | DV1I =="Yes"),
+                                                    "No support", "Support Violence")) %>% 
+                      
   #       - Drop all other variables and keep [ever_had_sex, education, violence_atti]
-    select("ever_had_sex", "education", "violence_atti")
+                      select("ever_had_sex", "education", "violence_atti")
 
 ```
 
@@ -238,13 +237,9 @@ Note that in the above example we used the `filter`, `mutate`, and `select` func
 You could also take the analysis further by presenting the descriptive statistics for all elements in the data using the `summaryTools` package
 
 ```{r echo=TRUE}
-
 install.packages("compareGroups")
-
 library(compareGroups)
-
 descrTable(TeenPreg)
-
 ```
 
 
@@ -289,9 +284,7 @@ Google, StackOVerFlow, Twitter, among others.
 You can also get help with a specific function by using the *?* function
 
 ```{r}
-
 ?mutate
-
 ```
 
 
