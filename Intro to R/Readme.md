@@ -13,7 +13,72 @@ Date: "11/6/2019"
 
 # Introduction
 
-In this session we will attempt to cover the basics of reading data into R, data cleaning/wrangling/Management and Analysis. If you are still to install R [[click here](https://cloud.r-project.org/)] or [[here](https://rstudio.com/products/rstudio/download/)] to install RStudio
+R is a powerful, cross-platform, open-source, and **free** software that has been widely adopted across a number of [social]science fields. This session will attempt to cover the basics of reading data into R, data cleaning/wrangling/Management and Analysis. The session will focus on laying a groundwork to enable future self-teaching of specific use cases *[models, packages, analysis]*. A number of platforms provide *free* training resources for learning R online. This includes but not limited to [[DataCamp](https://www.datacamp.com/)], [[edX](https://www.edx.org/)], [[Cousera](https://www.coursera.org/)], [[Udacity](https://www.udacity.com/)], and of course [[YouTube](https://www.youtube.com/)], 
+
+
+For the session, you will be required to have R and Rstudio installed on your computer. If you are still to download/install R [[click here](https://cloud.r-project.org/)] or [[here](https://rstudio.com/products/rstudio/download/)] to download RStudio
+
+
+## The R syntax
+
+The R synthax would usually comprise of:
+  - a function
+  - '<-' the assignment operator
+  - = for arguments
+  - # for comments # and how they are used to document function and its content
+  - $ the operator
+
+You can get an output from R simply by typing in math in the console.
+
+```{r}
+
+## How far are we from vision 2022 (in years)
+
+2022 - 2019
+
+3 + 5
+
+## Quiz - 
+ 
+# Pick a number
+
+```
+
+
+## Creating Objects & Function
+
+Instead of just typing, we could assign the value[answer] to an *object/variable*
+
+## Practice Exercise I
+
+```{r}
+## Practice Exercise I
+
+##  Add 3 and 5. Assign the value to a
+
+
+##  Subtract 2019 from 2022. Assign the value to b
+
+
+##  Find the square root of 49. Assign the value to c
+##  Note:: The R function to find square root is `sqrt`
+
+
+##  Find the value of (a+c)/b. Assign the value to d
+
+
+##  print the value of d
+
+print(d)
+
+##  or
+
+d
+
+
+```
+
+Note that we used a function *sqrt* to find the square root of 49 in the practice exercise. Functions are built in capabilities of R (base R) or could be gotten from libraries (see ##packages) or you could write yours. Exectuting a function is reffered to as *calling* the function. Most functions can take several arguments (details can be found on the package website).
 
 
 ## Packages
@@ -22,10 +87,10 @@ A package is a collection of R functions, complied code and sample data. Example
 
 Some common R packages are
   
-  -  GGPlot
-  -  dplyr
-  -  tidyr
-  -  readr
+  -  *GGPlot*
+  -  *dplyr*
+  -  *tidyr*
+  -  *readr*
   
   These packages are also embedded in the Tidyverse package and a detailed description of can be found on the package  [[website](https://www.tidyverse.org/packages/)].
 
@@ -37,6 +102,8 @@ To install/use a package
       > or devtools::install_github("repository/package.name")
   
   -  Step 2: Load the package    library(`package.name`)
+  
+  Note, that we are calling two functions above *install.packages* and *library*
   
 ```{r}
 
@@ -66,7 +133,7 @@ For this activity, we will use the [[teenageData](https://github.com/eolamijuwon
 # Please change all directory names accordingly
 
 
-TeenData <- read.csv("C:\\Users\\eOlamijuwon\\OneDrive\\Research\\Computational Social Science\\Eswatini UseR\\Intro to R\\teenageData.csv")
+TeenData <- read.csv(".\\teenageData.csv")
 
 #   Note that <- is an assignment function (just as = in STATA)
 
@@ -128,6 +195,7 @@ From the old `TeenData` data, create a new dataset ::TeenPreg:: focusing on:
   
   We will use the dplyr package [filter, select, mutate]
 
+
 ## Solution 1
 
 ```{r}
@@ -180,7 +248,7 @@ descrTable(TeenPreg)
 ```
 
 
-## Practice Exercise
+## Practice Exercise II
   
       - How many teenagers are in the `TeenPreg` dataset
       
@@ -190,19 +258,42 @@ descrTable(TeenPreg)
       
         NOTE: You can use the `table` function to tabulate
   
+  
 # Class Activity
 
   Using the TeenData, find:
   
-  - The number of teenagers who have a comprehensive knowledge of HIV
+      - The number of teenagers who have a comprehensive knowledge of HIV
+      
+      - The number of teenagers who have a positive attitude to the PLHIH
+      
+      - Among those who have had sex, what is the mean years since last sex (Age - Age1sex).
   
-  - The number of teenagers who have a positive attitude to the PLHIH
-  
-  - Among those who have had sex, what is the mean years since last sex (Age - Age1sex).
   
   
+NOTE:: Solutions to Practice exercise:
+
+  - [[Practice Exercise I](https://github.com/eolamijuwon/EswatiniUser/blob/master/Intro%20to%20R/Solutions/Practice%20Exercise%20I.R/)]
   
-NOTE:: Solutions to Practice exercise is available [[here](https://rstudio.com/products/rstudio/download/)] while the solution to activity 2 is available [[here](https://rstudio.com/products/rstudio/download/)]
+  - [[Practice Exercise II](https://github.com/eolamijuwon/EswatiniUser/blob/master/Intro%20to%20R/Solutions/Practice%20Exercise%20II.R)]
+  
+  - [[Class Activity](https://github.com/eolamijuwon/EswatiniUser/blob/master/Intro%20to%20R/Solutions/Practice%20Exercise%20II.R)]
+  
+
+# Where to Find Help
+
+Help is always online.
+
+Google, StackOVerFlow, Twitter, among others.
+
+You can also get help with a specific function by using the *?* function
+
+```{r}
+
+?mutate
+
+```
+
 
 
 # Contact
@@ -216,4 +307,3 @@ Website: [[e.Olamijuwon.com](https://e.olamijuwon.com/)]
 Website: [[Eswatini UseR](https://www.meetup.com/EswatiniUseR/)]
 
 Email: [[emmanuel[at]olamijuwon[dot]com]
-
