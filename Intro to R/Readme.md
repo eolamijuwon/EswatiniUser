@@ -258,9 +258,9 @@ descrTable(TeenPreg)
 
   Using the TeenData, find:
   
-      - The number of teenagers who have a comprehensive knowledge of HIV
-      
-      - The number of teenagers who have a positive attitude to the PLHIH
+      - The number of teenagers who have a comprehensive knowledge of HIV (HA2 - HA8BB)
+   
+      - The number of teenagers who have a positive attitude to the PLHIH (HA9 - HA12)
       
       - Among those who have had sex, what is the mean years since last sex (Age - Age1sex).
   
@@ -291,12 +291,12 @@ You can also get help with a specific function by using the *?* function
 
 # Contact
 
-Twitter: [[@eOlamijuwon](https://twitter.com/eolamijuwon/)]
+Website: [[Eswatini UseR](https://www.meetup.com/EswatiniUseR/)]
 
 Twitter: [[@EswatiniUseR](https://twitter.com/EswatiniUseR/)]
 
-Website: [[e.Olamijuwon.com](https://e.olamijuwon.com/)]
+Twitter: [[@eOlamijuwon](https://twitter.com/eolamijuwon/)]
 
-Website: [[Eswatini UseR](https://www.meetup.com/EswatiniUseR/)]
+Website: [[eolamijuwon](https://e.olamijuwon.com/)]
 
 Email: [[emmanuel[at]olamijuwon[dot]com]
