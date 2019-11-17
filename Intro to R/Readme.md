@@ -287,6 +287,9 @@ You can also get help with a specific function by using the *?* function
 ?mutate
 ```
 
+## Books
+R Programming for Data Science [[Website](https://bookdown.org/rdpeng/rprogdatascience/)]
+R for Data Science [[Website](https://r4ds.had.co.nz/)]
 
 
 # Contact
